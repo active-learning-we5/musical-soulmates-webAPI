@@ -13,6 +13,7 @@ namespace MusicalSoulmates.Data
     {
         public MSDbContext() : base()
         {
+
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
