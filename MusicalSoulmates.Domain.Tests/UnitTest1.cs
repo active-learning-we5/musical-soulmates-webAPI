@@ -5,6 +5,7 @@ namespace MusicalSoulmates.Domain.Tests
         [SetUp]
         public void Setup()
         {
+            
         }
 
         [Test]
