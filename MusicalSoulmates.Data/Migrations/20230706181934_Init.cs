@@ -5,7 +5,7 @@
 namespace MusicalSoulmates.Data.Migrations
 {
     /// <inheritdoc />
-    public partial class DbContext : Migration
+    public partial class Init : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -19,7 +19,7 @@ namespace MusicalSoulmates.Data.Migrations
                     Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Code = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Value = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ParentId = table.Column<int>(type: "int", nullable: false),
+                    ParentId = table.Column<int>(type: "int", nullable: true),
                     Order = table.Column<int>(type: "int", nullable: false),
                     IsDeleted = table.Column<bool>(type: "bit", nullable: false)
                 },
@@ -30,8 +30,7 @@ namespace MusicalSoulmates.Data.Migrations
                         name: "FK_BaseData_BaseData_ParentId",
                         column: x => x.ParentId,
                         principalTable: "BaseData",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(

@@ -11,7 +11,7 @@ namespace MusicalSoulmates.Data
 {
     public class MSDbContext : DbContext
     {
-        public MSDbContext() : base()
+        public MSDbContext(DbContextOptions options) : base(options)
         {
 
         }
