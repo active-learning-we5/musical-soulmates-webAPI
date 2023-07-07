@@ -1,18 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Transactions;
+﻿namespace MusicalSoulmates.Models;
 
-namespace MusicalSoulmates.Models
+using System.ComponentModel.DataAnnotations;
+
+public class BaseDataTranslation
 {
-    public class BaseDataTranslation
-    {
-        public int Id { get; set; }
-        public BaseData BaseData { get; set; }
-        public int BaseDataId { get; set; }
-        public string Lang { get; set; }
-        public string Title { get; set; }
-    }
+    public BaseData BaseData { get; set; }
+    [Required]
+    public int BaseDataId { get; set; }
+    [Required]
+    public string Lang { get; set; }
+    public string Title { get; set; }
 }

@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MusicalSoulmates.Data;
 
@@ -11,9 +12,11 @@ using MusicalSoulmates.Data;
 namespace MusicalSoulmates.Data.Migrations
 {
     [DbContext(typeof(MSDbContext))]
-    partial class MSDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230706183722_TranslationKeyFixup")]
+    partial class TranslationKeyFixup
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
