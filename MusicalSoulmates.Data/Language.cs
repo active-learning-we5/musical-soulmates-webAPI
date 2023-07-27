@@ -13,6 +13,14 @@ namespace MusicalSoulmates.Data
 
         public string EnName { get; set; }
 
+
+
+
+
+
+
+
+
         public bool IsRTL { get; set; }
     }
 }
