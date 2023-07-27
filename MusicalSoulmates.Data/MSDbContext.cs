@@ -1,4 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using MusicalSoulmates.Models;
 using System;
 using System.Collections.Generic;
@@ -17,10 +17,6 @@ namespace MusicalSoulmates.Data
         }
 
         public DbSet<Language> Languages { get; set; }
-
-        public MSDbContext(DbContextOptions<MSDbContext> options) : base(options)
-        {
-        }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
