@@ -16,6 +16,12 @@ namespace MusicalSoulmates.Data
 
         }
 
+        public DbSet<Language> Languages { get; set; }
+
+        public MSDbContext(DbContextOptions<MSDbContext> options) : base(options)
+        {
+        }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             // if (!optionsBuilder.IsConfigured)
